@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=$(node -p "require('.packages/floating-vue/package.json').version")
+VERSION=$(node -p "require('./packages/floating-vue/package.json').version")
 
 git config --local user.email "github@reedsy.com"
 git config --local user.name "GitHub Action"
