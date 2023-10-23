@@ -450,7 +450,7 @@ export default () => defineComponent({
       if (this.$_hideInProgress) return
 
       // Abort if child is shown
-      if (this.shownChildren.size > 0) {
+      if (new Set(this.shownChildren).size > 0) {
         this.$_pendingHide = true
         return
       }
@@ -684,7 +684,7 @@ export default () => defineComponent({
     },
 
     $_scheduleHide (event = null, skipDelay = false) {
-      if (this.shownChildren.size > 0) {
+      if (new Set(this.shownChildren).size > 0) {
         this.$_pendingHide = true
         return
       }
@@ -788,7 +788,7 @@ export default () => defineComponent({
     },
 
     async $_applyHide (skipTransition = false) {
-      if (this.shownChildren.size > 0) {
+      if (new Set(this.shownChildren).size > 0) {
         this.$_pendingHide = true
         this.$_hideInProgress = false
         return
