@@ -1,4 +1,4 @@
-name: Test
+name: CI
 
 on:
   push:
@@ -13,14 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
-        # Use PAT instead of default Github token, because the default
-        # token deliberately will not trigger another workflow run
-        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '18.x'
+        node-version: '20.x'
         registry-url: 'https://npm.pkg.github.com'
     - uses: pnpm/action-setup@v2
     - name: Install
@@ -31,6 +27,6 @@ jobs:
       run: pnpm build
     - name: Test
       run: pnpm test
-    - name: Tag
-      if: ${{ github.ref == 'refs/heads/main' }}
-      run: ./tag.sh
+    - name: Release
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      run: ./release.sh

@@ -24,3 +24,5 @@ git add --all packages/floating-vue/dist/
 git commit --message "Release version $VERSION"
 git tag $VERSION
 git push origin refs/tags/$VERSION
+
+npm publish -w packages/floating-vue
