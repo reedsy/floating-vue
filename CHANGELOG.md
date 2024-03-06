@@ -1,5 +1,162 @@
 # Changelog
 
+## v5.2.2
+
+
+### 🩹 Fixes
+
+  - V-close-popper directive, #1022 (#1022)
+
+### ❤️  Contributors
+
+- Guillaume Chau ([@Akryum](http://github.com/Akryum))
+
+## v5.2.1
+
+
+### 🚀 Enhancements
+
+  - Add deprecation notice to VTooltip and VClosePopper (abf094f)
+
+### 🩹 Fixes
+
+  - Revert autohide on mousedown, add autoHideOnMousedown in config, fix #1015 (#1015)
+  - Watch triggers array deeply, fix #1018 (#1018)
+
+### ❤️  Contributors
+
+- Guillaume Chau ([@Akryum](http://github.com/Akryum))
+
+## v5.2.0
+
+
+### 🚀 Enhancements
+
+  - Expose global `recomputeAllPoppers` helper (#1010)
+
+### ❤️  Contributors
+
+- Anthony Fu <anthonyfu117@hotmail.com>
+
+## v5.1.1
+
+
+### 🩹 Fixes
+
+  - Fix v-close-popper to function on mousedown (#1014)
+
+### ❤️  Contributors
+
+- Giannis Koutsaftakis ([@kouts](http://github.com/kouts))
+
+## v5.1.0
+
+
+### 🚀 Enhancements
+
+  - Close on mousedown (89258a9)
+
+### 💅 Refactors
+
+  - Improve types (#1011)
+
+### 🏡 Chore
+
+  - Remove vue2 demo (#1009)
+
+### ❤️  Contributors
+
+- Guillaume Chau ([@Akryum](http://github.com/Akryum))
+- Anthony Fu <anthonyfu117@hotmail.com>
+
+## v5.0.3
+
+
+### 🩹 Fixes
+
+  - Set default disposeTimeout to default transition duration (18e786c)
+
+### 📖 Documentation
+
+  - Import directly (fa626ac)
+  - Upgrade vitepress + search (5a46278)
+  - Enable search detailed view by default (3175a62)
+
+### ❤️  Contributors
+
+- Guillaume Chau ([@Akryum](http://github.com/Akryum))
+
+## v5.0.2
+
+
+### 🩹 Fixes
+
+  - **menu:** Don't close on popper blur (74b940f)
+
+### 🌊 Types
+
+  - Improved props types (5bf9b74)
+
+### ❤️  Contributors
+
+- Guillaume Chau ([@Akryum](http://github.com/Akryum))
+
+## v5.0.1
+
+
+### 🩹 Fixes
+
+  - `Element' is not defined on server (47eb20c)
+
+### 📖 Documentation
+
+  - Update to v5 (44d0108)
+
+### ❤️  Contributors
+
+- Guillaume Chau ([@Akryum](http://github.com/Akryum))
+
+## v5.0.0
+
+Bumping the version to prevent issues with tags from vue-tooltip v3 and v4 in the repository.
+
+No changes compared to floating-vue v2.0.0
+
+## v2.0.0
+
+
+### 🚀 Enhancements
+
+  - Export vTooltip and vClosePopper for script setup usage (16b3a9b)
+  - Remove dispose event (4be2062)
+
+### 🩹 Fixes
+
+  - Import nuxt composables from #imports (#998)
+  - Change default disposeTimeout to 0 (0699bf8)
+
+### 💅 Refactors
+
+  - Default components are now simple ts files (6439fce)
+
+### 📖 Documentation
+
+  - Fixed spelling mistake in migration v2 docs (#983)
+
+### 🌊 Types
+
+  - Props and events (ee27b15)
+
+### ✅ Tests
+
+  - **lint:** Fix (942a360)
+
+### ❤️  Contributors
+
+- Guillaume Chau ([@Akryum](http://github.com/Akryum))
+- Yahlieel Jafta <yahlieel@hotmail.com>
+- Daniel Roe <daniel@roe.dev>
+
 ## v2.0.0-beta.24
 
 

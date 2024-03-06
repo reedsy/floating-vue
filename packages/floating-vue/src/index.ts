@@ -1,15 +1,16 @@
 import { assign } from './util/assign-deep'
 import { config, FloatingVueConfig } from './config'
 import 'vue-resize/dist/vue-resize.css'
+import './style.css'
 // Components
-import PrivateDropdown from './components/Dropdown.vue'
-import PrivateMenu from './components/Menu.vue'
+import PrivateDropdown from './components/Dropdown'
+import PrivateMenu from './components/Menu'
 import PrivatePopper from './components/Popper'
 import PrivatePopperContent from './components/PopperContent.vue'
 import PrivatePopperMethods from './components/PopperMethods'
 import PrivatePopperWrapper from './components/PopperWrapper.vue'
 import PrivateThemeClass from './components/ThemeClass'
-import PrivateTooltip from './components/Tooltip.vue'
+import PrivateTooltip from './components/Tooltip'
 import PrivateTooltipDirective from './components/TooltipDirective.vue'
 // Directives
 import PrivateVTooltip from './directives/v-tooltip'
@@ -19,9 +20,17 @@ import PrivateVClosePopper from './directives/v-close-popper'
 
 export const options = config
 // Directive
+/**
+ * @deprecated Import `vTooltip` instead.
+ */
 export const VTooltip = PrivateVTooltip
+export const vTooltip = PrivateVTooltip // For <script setup>
 export { createTooltip, destroyTooltip } from './directives/v-tooltip'
+/**
+ * @deprecated Import `vClosePopper` instead.
+ */
 export const VClosePopper = PrivateVClosePopper
+export const vClosePopper = PrivateVClosePopper // For <script setup>
 // Components
 export const Dropdown = PrivateDropdown
 export const Menu = PrivateMenu
@@ -33,10 +42,12 @@ export const ThemeClass = PrivateThemeClass
 export const Tooltip = PrivateTooltip
 export const TooltipDirective = PrivateTooltipDirective
 // Utils
-export { hideAllPoppers } from './components/Popper'
+export { hideAllPoppers, recomputeAllPoppers } from './components/Popper'
 export * from './util/events'
 export { placements } from './util/popper'
 export type { Placement } from './util/popper'
+// Types
+export type { TriggerEvent } from './components/PopperWrapper.vue'
 
 /* Vue plugin */
 
