@@ -18,10 +18,6 @@ fi
 
 echo '!packages/floating-vue/dist' >> .gitignore
 
-git checkout -b release-$VERSION
-git add .gitignore
-git add --all packages/floating-vue/dist/
-git commit --message "Release version $VERSION"
 git tag $VERSION
 git push origin refs/tags/$VERSION
 
